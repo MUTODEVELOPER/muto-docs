@@ -1,23 +1,18 @@
-# MUTO Docs
+MUTO AI-powered crypto infrastructure on BNB Chain.
 
-## Run locally
+MUTO combines community-driven branding, on-chain agent architecture, and practical analytics tooling into one expanding ecosystem.
 
-```bash
-npm install
-npm run dev
-```
+What is MUTO building?
 
-Then open `http://localhost:3000`.
+MUTO is building an AI-native crypto ecosystem with a strong social brand, a real utility direction, and a long-term focus on intelligent blockchain interfaces.
 
-## Deploy
 
-### Vercel
-1. Push this folder to GitHub
-2. Import the repo in Vercel
-3. Deploy
+Official Links
 
-### Your own VPS
-1. `npm install`
-2. `npm run build`
-3. `npm run start`
-4. Reverse-proxy with Nginx
+Website: https://mutobnb.com 
+X / Twitter: https://x.com/Muto_cto _
+Telegram: https://t.me/mutobnb 
+LinkTree: https://linktr.ee/mutobnb 
+
+Contract Address
+0x41AE062031f2DE850D1b7f4619a570c8D5620483
