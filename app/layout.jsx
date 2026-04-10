@@ -26,7 +26,7 @@ function BrandNavbar() {
         <a href="https://mutobnb.com" target="_blank" rel="noreferrer" className="top-nav-link">
           Website
         </a>
-        <a href="https://x.com/Muto_cto_" target="_blank" rel="noreferrer" className="top-nav-link">
+        <a href="https://x.com/MutoCore" target="_blank" rel="noreferrer" className="top-nav-link">
           X
         </a>
         <a href="https://t.me/mutobnb" target="_blank" rel="noreferrer" className="top-nav-link">
