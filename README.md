@@ -10,9 +10,9 @@ MUTO is building an AI-native crypto ecosystem with a strong social brand, a rea
 Official Links
 
 Website: https://mutobnb.com 
-X / Twitter: https://x.com/Muto_cto _
+X / Twitter: https://x.com/MutoCore
 Telegram: https://t.me/mutobnb 
 LinkTree: https://linktr.ee/mutobnb 
-
+App: https://app.mutobnb.com/
 Contract Address
 0x41AE062031f2DE850D1b7f4619a570c8D5620483
