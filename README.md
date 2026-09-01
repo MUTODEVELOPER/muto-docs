@@ -1,18 +1,19 @@
-MUTO AI-powered crypto infrastructure on BNB Chain.
+# MUTO Docs
 
-MUTO combines community-driven branding, on-chain agent architecture, and practical analytics tooling into one expanding ecosystem.
+Official technical documentation for the MUTO AI Ecosystem on BNB Chain.
 
-What is MUTO building?
+## Local development
 
-MUTO is building an AI-native crypto ecosystem with a strong social brand, a real utility direction, and a long-term focus on intelligent blockchain interfaces.
+```bash
+npm install
+npm run dev
+```
 
+## Production build
 
-Official Links
+```bash
+npm run build
+npm start
+```
 
-Website: https://mutobnb.com 
-X / Twitter: https://x.com/MutoCore
-Telegram: https://t.me/mutobnb 
-LinkTree: https://linktr.ee/mutobnb 
-App: https://app.mutobnb.com/
-Contract Address
-0x41AE062031f2DE850D1b7f4619a570c8D5620483
+Current documentation covers the MUTO Agent, BNB Intelligence, PancakeSwap activity/flow, Token Radar, wallet intelligence, multi-wallet activity, alerts and the current product roadmap.
