@@ -1,0 +1,27 @@
+# BNB Intelligence
+
+<p className="doc-lead">BNB Intelligence is MUTO's live on-chain data layer. It combines direct BNB Chain sampling, PancakeSwap event processing and rolling observations into structured intelligence for the MUTO application and Agent.</p>
+
+<div className="intel-strip"><span className="mini-badge">Live</span> &nbsp; Dashboard refresh: approximately <strong>15 seconds</strong>. Individual collectors and caches may use different observation windows depending on the module.</div>
+
+<div className="section-grid">
+<div className="tech-panel"><span className="eyebrow">Network</span><h3>BNB Chain Pulse</h3><div className="endpoint">/api/bnb-intelligence/overview</div><p>Recent-block TPS, transactions per block, unique wallets, contract interactions, BNB transferred and gas context with rolling history.</p></div>
+<div className="tech-panel"><span className="eyebrow">DEX</span><h3>PancakeSwap Activity</h3><div className="endpoint">/api/bnb-intelligence/dex/pancakeswap</div><p>Verified PancakeSwap router and factory observation across routed interactions, traders, native BNB input, router share and factory activity.</p></div>
+<div className="tech-panel"><span className="eyebrow">Swap Flow</span><h3>PancakeSwap Flow</h3><div className="endpoint">/api/bnb-intelligence/dex/pancakeswap/flow</div><p>Decoded V2/V3 Swap events, active pools, traders, quote-side estimated USD notional and directional flow where evidence is sufficient.</p></div>
+<div className="tech-panel"><span className="eyebrow">Baselines</span><h3>DEX Intelligence</h3><div className="endpoint">/api/bnb-intelligence/dex/pancakeswap/anomalies</div><p>Rolling DEX observations compared against 5m / 15m / 1h / 4h / 24h baselines, with bootstrap states kept separate from confirmed anomaly states.</p></div>
+<div className="tech-panel"><span className="eyebrow">Tokens</span><h3>Token Radar</h3><div className="endpoint">/api/bnb-intelligence/token-radar</div><p>Event-level token activity ranked by observed volume, traders, swaps, directional flow and acceleration. Quote identity is verified by canonical address.</p></div>
+<div className="tech-panel"><span className="eyebrow">Wallets</span><h3>Wallet Activity</h3><div className="endpoint">/api/bnb-intelligence/wallets</div><p>Decoded PancakeSwap activity mapped to transaction senders with rolling observations for token, pool, flow and coverage context.</p></div>
+<div className="tech-panel"><span className="eyebrow">Behavior</span><h3>Wallet Profiles</h3><div className="endpoint">/api/bnb-intelligence/wallet-profiles</div><p>Wallet activity compared with its available rolling baseline using descriptive states such as CALIBRATING, NORMAL RANGE, ELEVATED and HIGH DEVIATION.</p></div>
+<div className="tech-panel"><span className="eyebrow">Patterns</span><h3>Multi-Wallet Activity</h3><div className="endpoint">/api/bnb-intelligence/multi-wallet-activity</div><p>Distinct wallets grouped by observed token interaction, with synchronized buy-side or sell-side activity surfaced when evidence meets the observation rules.</p></div>
+</div>
+
+<Callout title="Interpretation boundary">Synchronized activity means temporally close observed activity. It does not by itself prove coordination, common control, shared funding or intent.</Callout>
+
+## Next Data Layers
+<ul className="feature-list">
+<li>Wallet Relationship Intelligence</li>
+<li>Evidence-based recurring behavioral overlap</li>
+<li>Direct funding and transfer evidence where verifiable on-chain</li>
+<li>Funding Graph visualization</li>
+<li>Deeper AI interpretation and Agent integration</li>
+</ul>

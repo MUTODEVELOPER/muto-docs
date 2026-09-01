@@ -1,21 +1,22 @@
-# API & Agent Reference
+# API & Intelligence Reference
 
-## Agent Endpoint
+<p className="doc-lead">MUTO exposes product interfaces for the AI Agent together with structured BNB Intelligence endpoints used by the application. The original Agent interface remains part of the ecosystem, while the Intelligence layer extends it with direct on-chain context from BNB Chain and PancakeSwap.</p>
 
-MUTO AI Agent is accessible through the following endpoints:
-
-<div className="token-box">
-
-- 🌐 **Web Interface:** https://mutobnb.com/agent/  
-- 📡 **Agent Metadata:** https://mutobnb.com/agent.json  
-
+<div className="vision-panel">
+<strong>Architecture</strong><br />
+Agent Interfaces → BNB Chain → DEX Activity → Tokens → Wallets → Relationships → AI Interpretation
 </div>
 
----
+## MUTO Agent Interfaces
 
-## Metadata Structure
+<div className="tech-panel">
+<div className="data-row"><div className="data-key">WEB INTERFACE</div><div className="data-value">https://app.mutobnb.com/</div></div>
+<div className="data-row"><div className="data-key">X Agent</div><div className="data-value">https://x.com/MutoAgent</div></div>
+</div>
 
-The agent metadata defines the identity and capabilities of the MUTO AI system.
+These are the original public interfaces for accessing MUTO and describing the Agent to external systems.
+
+## Agent Metadata Structure
 
 ```json
 {
@@ -34,3 +35,59 @@ The agent metadata defines the identity and capabilities of the MUTO AI system.
     "api"
   ]
 }
+```
+
+<div className="vision-panel">The metadata block is retained for compatibility with the original MUTO Agent interface. The live product has since expanded with the BNB Intelligence data layer described below.</div>
+
+## BNB Intelligence API
+
+<p className="doc-lead">These endpoints power MUTO's current on-chain intelligence layer. They expose observational network, DEX, token and wallet activity for the application and future Agent integrations.</p>
+
+### Chain Intelligence
+<div className="tech-panel">
+<div className="endpoint">GET /api/bnb-intelligence/overview</div>
+<p>Recent BNB Chain activity including transaction throughput, wallet activity, contract interactions, transferred BNB, gas conditions and rolling network context.</p>
+</div>
+
+### PancakeSwap Intelligence
+<div className="tech-panel">
+<div className="endpoint">GET /api/bnb-intelligence/dex/pancakeswap</div>
+<p>Observed PancakeSwap router and factory activity across the sampled BNB Chain window.</p>
+<div className="endpoint">GET /api/bnb-intelligence/dex/pancakeswap/flow</div>
+<p>Decoded swap-event flow including traders, active pools, estimated quote-side volume and directional flow where evidence is available.</p>
+<div className="endpoint">GET /api/bnb-intelligence/dex/pancakeswap/anomalies</div>
+<p>Activity deviations measured against rolling DEX baselines, including global and pool-level signals.</p>
+</div>
+
+### Token Intelligence
+<div className="tech-panel">
+<div className="endpoint">GET /api/bnb-intelligence/token-radar</div>
+<p>Ranks observed token activity using swap volume, traders, swap count, directional evidence and rolling activity acceleration.</p>
+</div>
+
+### Wallet Intelligence
+<div className="tech-panel">
+<div className="endpoint">GET /api/bnb-intelligence/wallets</div>
+<p>Observed wallets interacting through decoded PancakeSwap activity in the current collection window.</p>
+<div className="endpoint">GET /api/bnb-intelligence/wallets/:address</div>
+<p>Detailed activity view for a specific observed wallet.</p>
+<div className="endpoint">GET /api/bnb-intelligence/wallet-profiles</div>
+<p>Descriptive wallet behavior profiles measured against rolling observations.</p>
+<div className="endpoint">GET /api/bnb-intelligence/wallet-profile/:address</div>
+<p>Behavior profile and observed context for a specific wallet.</p>
+<div className="endpoint">GET /api/bnb-intelligence/multi-wallet-activity</div>
+<p>Detects multiple distinct wallets interacting with the same token and identifies temporally synchronized activity without assuming common ownership or coordination.</p>
+</div>
+
+## Data Semantics
+
+<div className="vision-panel"><strong>OBSERVATIONAL INTELLIGENCE</strong><br />API outputs describe activity observed by MUTO. Coverage can vary with the sample window, RPC availability, route decoding, token metadata resolution and quote-side pricing evidence. Activity labels are descriptive and are not investment recommendations, profitability classifications or token safety ratings.</div>
+
+## Product Interfaces
+<div className="token-box">
+<div className="data-row"><div className="data-key">APPLICATION</div><div className="data-value">https://app.mutobnb.com</div></div>
+<div className="data-row"><div className="data-key">WEBSITE</div><div className="data-value">https://mutobnb.com</div></div>
+<div className="data-row"><div className="data-key">TELEGRAM</div><div className="data-value">https://t.me/mutobnb</div></div>
+</div>
+
+<Callout title="Developer note">Consumers should handle bootstrap and calibration states, incomplete pricing and directional coverage explicitly instead of interpreting missing evidence as zero activity. New relationship and Agent integration endpoints can be added as the intelligence architecture evolves.</Callout>
