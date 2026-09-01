@@ -1,8 +1,1 @@
-export default function Callout({ title, children }) {
-  return (
-    <div className="my-6 rounded-2xl border border-[var(--muto-border)] bg-[var(--muto-panel)] p-5">
-      {title ? <div className="mb-2 text-sm font-semibold text-[#f3ba2f]">{title}</div> : null}
-      <div className="text-sm text-neutral-300">{children}</div>
-    </div>
-  )
-}
+export default function Callout({title,children}){return <div className="my-6 rounded-md border border-[rgba(215,255,0,.16)] bg-[rgba(215,255,0,.045)] p-5">{title?<div className="mb-2 font-mono text-xs font-bold uppercase tracking-[.12em] text-[#d7ff00]">// {title}</div>:null}<div className="text-sm text-neutral-300">{children}</div></div>}
